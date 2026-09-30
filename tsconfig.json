@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    // React Email templates are .tsx. `react-jsx` needs no React import in
+    // every file, and the runtime it points at is a dependency, not a build
+    // step — `nest build` compiles them like any other source.
+    "jsx": "react-jsx",
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es2021",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "lib": ["ES2021", "DOM"],
+    "paths": {
+      "@shared/*": ["src/shared/*"],
+      "@auth/*": ["src/auth/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}
